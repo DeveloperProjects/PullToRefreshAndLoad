@@ -14,6 +14,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.tr.droplist.R;
+import com.tr.droplist.adapter.ViewAdapter;
+import com.tr.droplist.impl.MyListener;
 import com.tr.droplist.utils.PullToRefreshLayout;
 
 public class MainActivity extends Activity {
@@ -33,15 +35,15 @@ public class MainActivity extends Activity {
      */
     private void initListView() {
         List<String> items = new ArrayList<String>();
-        items.add("可下拉刷新上拉加载的ListView");
-        items.add("可下拉刷新上拉加载的GridView");
-        items.add("可下拉刷新上拉加载的ExpandableListView");
-        items.add("可下拉刷新上拉加载的SrcollView");
-        items.add("可下拉刷新上拉加载的WebView");
-        items.add("可下拉刷新上拉加载的ImageView");
-        items.add("可下拉刷新上拉加载的TextView");
+        items.add("Refresh ListView");
+        items.add("Refresh GridView");
+        items.add("Refresh ExpandableListView");
+        items.add("Refresh SrcollView");
+        items.add("Refresh WebView");
+        items.add("Refresh ImageView");
+        items.add("Refresh TextView");
 
-        MyAdapter adapter = new MyAdapter(this, items);
+        ViewAdapter adapter = new ViewAdapter(this, items);
         listView.setAdapter(adapter);
 
         listView.setOnItemLongClickListener(new OnItemLongClickListener() {
@@ -62,25 +64,25 @@ public class MainActivity extends Activity {
                 Intent it = new Intent();
                 switch (position) {
                     case 0:
-                        it.setClass(MainActivity.this, PullableListViewActivity.class);
+                        it.setClass(MainActivity.this, RefreshListViewActivity.class);
                         break;
                     case 1:
-                        it.setClass(MainActivity.this, PullableGridViewActivity.class);
+                        it.setClass(MainActivity.this, RefreshGridViewActivity.class);
                         break;
                     case 2:
-                        it.setClass(MainActivity.this, PullableExpandableListViewActivity.class);
+                        it.setClass(MainActivity.this, RefreshExpandableListViewActivity.class);
                         break;
                     case 3:
-                        it.setClass(MainActivity.this, PullableScrollViewActivity.class);
+                        it.setClass(MainActivity.this, RefreshScrollViewActivity.class);
                         break;
                     case 4:
-                        it.setClass(MainActivity.this, PullableWebViewActivity.class);
+                        it.setClass(MainActivity.this, RefreshWebViewActivity.class);
                         break;
                     case 5:
-                        it.setClass(MainActivity.this, PullableImageViewActivity.class);
+                        it.setClass(MainActivity.this, RefreshImageViewActivity.class);
                         break;
                     case 6:
-                        it.setClass(MainActivity.this, PullableTextViewActivity.class);
+                        it.setClass(MainActivity.this, RefreshTextViewActivity.class);
                         break;
 
                     default:

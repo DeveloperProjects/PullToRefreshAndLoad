@@ -8,8 +8,6 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="18" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -23,19 +21,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.tr.droplist.activity.PullableExpandableListViewActivity" >
+        <activity android:name="com.tr.droplist.activity.RefreshExpandableListViewActivity" >
         </activity>
-        <activity android:name="com.tr.droplist.activity.PullableGridViewActivity" >
+        <activity android:name="com.tr.droplist.activity.RefreshGridViewActivity" >
         </activity>
-        <activity android:name="com.tr.droplist.activity.PullableListViewActivity" >
+        <activity android:name="com.tr.droplist.activity.RefreshListViewActivity" >
         </activity>
-        <activity android:name="com.tr.droplist.activity.PullableScrollViewActivity" >
+        <activity android:name="com.tr.droplist.activity.RefreshScrollViewActivity" >
         </activity>
-        <activity android:name="com.tr.droplist.activity.PullableWebViewActivity" >
+        <activity android:name="com.tr.droplist.activity.RefreshWebViewActivity" >
         </activity>
-        <activity android:name="com.tr.droplist.activity.PullableImageViewActivity" >
+        <activity android:name="com.tr.droplist.activity.RefreshImageViewActivity" >
         </activity>
-        <activity android:name="com.tr.droplist.activity.PullableTextViewActivity" >
+        <activity android:name="com.tr.droplist.activity.RefreshTextViewActivity" >
         </activity>
     </application>
 

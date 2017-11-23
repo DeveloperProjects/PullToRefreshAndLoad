@@ -1,20 +1,22 @@
-package com.tr.droplist.pullableview;
+package com.tr.droplist.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.ScrollView;
 
-public class PullableScrollView extends ScrollView implements Pullable {
+import com.tr.droplist.impl.Refresh;
 
-    public PullableScrollView(Context context) {
+public class RefreshScrollView extends ScrollView implements Refresh {
+
+    public RefreshScrollView(Context context) {
         super(context);
     }
 
-    public PullableScrollView(Context context, AttributeSet attrs) {
+    public RefreshScrollView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public PullableScrollView(Context context, AttributeSet attrs, int defStyle) {
+    public RefreshScrollView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 

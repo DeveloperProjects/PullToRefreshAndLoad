@@ -1,20 +1,22 @@
-package com.tr.droplist.pullableview;
+package com.tr.droplist.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-public class PullableImageView extends ImageView implements Pullable {
+import com.tr.droplist.impl.Refresh;
 
-    public PullableImageView(Context context) {
+public class RefreshImageView extends ImageView implements Refresh {
+
+    public RefreshImageView(Context context) {
         super(context);
     }
 
-    public PullableImageView(Context context, AttributeSet attrs) {
+    public RefreshImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public PullableImageView(Context context, AttributeSet attrs, int defStyle) {
+    public RefreshImageView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 

@@ -3,7 +3,6 @@ package com.tr.droplist.utils;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Handler;
@@ -20,7 +19,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.tr.droplist.R;
-import com.tr.droplist.pullableview.Pullable;
+import com.tr.droplist.impl.Refresh;
 
 /**
  * 自定义的布局，用来管理三个子控件，其中一个是下拉头，一个是包含内容的pullableView（可以是实现Pullable接口的的任何View），
@@ -363,7 +362,7 @@ public class PullToRefreshLayout extends RelativeLayout {
                 break;
             case MotionEvent.ACTION_MOVE:
                 if (mEvents == 0) {
-                    if (pullDownY > 0 || (((Pullable) pullableView).canPullDown()
+                    if (pullDownY > 0 || (((Refresh) pullableView).canPullDown()
                             && canPullDown && state != LOADING)) {
                         // 可以下拉，正在加载时不能下拉
                         // 对实际滑动距离做缩小，造成用力拉的感觉
@@ -381,7 +380,7 @@ public class PullToRefreshLayout extends RelativeLayout {
                             isTouch = true;
                         }
                     } else if (pullUpY < 0
-                            || (((Pullable) pullableView).canPullUp() && canPullUp && state != REFRESHING)) {
+                            || (((Refresh) pullableView).canPullUp() && canPullUp && state != REFRESHING)) {
                         // 可以上拉，正在刷新时不能上拉
                         pullUpY = pullUpY + (ev.getY() - lastY) / radio;
 

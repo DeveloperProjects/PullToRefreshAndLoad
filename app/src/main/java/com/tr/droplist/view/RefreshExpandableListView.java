@@ -1,20 +1,22 @@
-package com.tr.droplist.pullableview;
+package com.tr.droplist.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.ExpandableListView;
 
-public class PullableExpandableListView extends ExpandableListView implements Pullable {
+import com.tr.droplist.impl.Refresh;
 
-    public PullableExpandableListView(Context context) {
+public class RefreshExpandableListView extends ExpandableListView implements Refresh {
+
+    public RefreshExpandableListView(Context context) {
         super(context);
     }
 
-    public PullableExpandableListView(Context context, AttributeSet attrs) {
+    public RefreshExpandableListView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public PullableExpandableListView(Context context, AttributeSet attrs, int defStyle) {
+    public RefreshExpandableListView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 

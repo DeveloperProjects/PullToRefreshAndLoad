@@ -5,9 +5,10 @@ import android.app.Activity;
 import android.os.Bundle;
 
 import com.tr.droplist.R;
+import com.tr.droplist.impl.MyListener;
 import com.tr.droplist.utils.PullToRefreshLayout;
 
-public class PullableImageViewActivity extends Activity {
+public class RefreshImageViewActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

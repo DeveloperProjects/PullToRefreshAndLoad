@@ -16,9 +16,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.tr.droplist.R;
+import com.tr.droplist.impl.MyListener;
 import com.tr.droplist.utils.PullToRefreshLayout;
 
-public class PullableExpandableListViewActivity extends Activity {
+public class RefreshExpandableListViewActivity extends Activity {
     ExpandableListView expandableListView;
 
     @Override
@@ -40,7 +41,7 @@ public class PullableExpandableListViewActivity extends Activity {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition,
                                         long id) {
-                Toast.makeText(PullableExpandableListViewActivity.this,
+                Toast.makeText(RefreshExpandableListViewActivity.this,
                         " Click on group " + groupPosition + " item " + childPosition, Toast.LENGTH_SHORT).show();
                 return true;
             }
@@ -49,7 +50,7 @@ public class PullableExpandableListViewActivity extends Activity {
 
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(PullableExpandableListViewActivity.this,
+                Toast.makeText(RefreshExpandableListViewActivity.this,
                         "LongClick on " + parent.getAdapter().getItemId(position), Toast.LENGTH_SHORT).show();
                 return true;
             }

@@ -13,9 +13,11 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import com.tr.droplist.R;
+import com.tr.droplist.adapter.ViewAdapter;
+import com.tr.droplist.impl.MyListener;
 import com.tr.droplist.utils.PullToRefreshLayout;
 
-public class PullableGridViewActivity extends Activity {
+public class RefreshGridViewActivity extends Activity {
     GridView gridView;
 
     @Override
@@ -35,13 +37,13 @@ public class PullableGridViewActivity extends Activity {
         for (int i = 0; i < 30; i++) {
             items.add("这里是item " + i);
         }
-        MyAdapter adapter = new MyAdapter(this, items);
+        ViewAdapter adapter = new ViewAdapter(this, items);
         gridView.setAdapter(adapter);
         gridView.setOnItemLongClickListener(new OnItemLongClickListener() {
 
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(PullableGridViewActivity.this, "LongClick on " + parent.getAdapter().getItemId(position),
+                Toast.makeText(RefreshGridViewActivity.this, "LongClick on " + parent.getAdapter().getItemId(position),
                         Toast.LENGTH_SHORT).show();
                 return true;
             }
@@ -50,7 +52,7 @@ public class PullableGridViewActivity extends Activity {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(PullableGridViewActivity.this, " Click on " + parent.getAdapter().getItemId(position),
+                Toast.makeText(RefreshGridViewActivity.this, " Click on " + parent.getAdapter().getItemId(position),
                         Toast.LENGTH_SHORT).show();
             }
         });

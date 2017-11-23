@@ -1,20 +1,22 @@
-package com.tr.droplist.pullableview;
+package com.tr.droplist.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.GridView;
+import android.widget.ListView;
 
-public class PullableGridView extends GridView implements Pullable {
+import com.tr.droplist.impl.Refresh;
 
-    public PullableGridView(Context context) {
+public class RefreshListView extends ListView implements Refresh {
+
+    public RefreshListView(Context context) {
         super(context);
     }
 
-    public PullableGridView(Context context, AttributeSet attrs) {
+    public RefreshListView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public PullableGridView(Context context, AttributeSet attrs, int defStyle) {
+    public RefreshListView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 
@@ -24,7 +26,7 @@ public class PullableGridView extends GridView implements Pullable {
             // 没有item的时候也可以下拉刷新
             return true;
         } else if (getFirstVisiblePosition() == 0 && getChildAt(0).getTop() >= 0) {
-            // 滑到顶部了
+            // 滑到ListView的顶部了
             return true;
         } else
             return false;
@@ -44,5 +46,4 @@ public class PullableGridView extends GridView implements Pullable {
         }
         return false;
     }
-
 }

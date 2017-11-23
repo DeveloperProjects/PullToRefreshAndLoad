@@ -1,20 +1,22 @@
-package com.tr.droplist.pullableview;
+package com.tr.droplist.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-public class PullableTextView extends TextView implements Pullable {
+import com.tr.droplist.impl.Refresh;
 
-    public PullableTextView(Context context) {
+public class RefreshTextView extends TextView implements Refresh {
+
+    public RefreshTextView(Context context) {
         super(context);
     }
 
-    public PullableTextView(Context context, AttributeSet attrs) {
+    public RefreshTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public PullableTextView(Context context, AttributeSet attrs, int defStyle) {
+    public RefreshTextView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 

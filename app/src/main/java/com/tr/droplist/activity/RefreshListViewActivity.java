@@ -13,9 +13,11 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.tr.droplist.R;
+import com.tr.droplist.adapter.ViewAdapter;
+import com.tr.droplist.impl.MyListener;
 import com.tr.droplist.utils.PullToRefreshLayout;
 
-public class PullableListViewActivity extends Activity {
+public class RefreshListViewActivity extends Activity {
 
     private ListView listView;
     private PullToRefreshLayout ptrl;
@@ -49,13 +51,13 @@ public class PullableListViewActivity extends Activity {
         for (int i = 0; i < 30; i++) {
             items.add("这里是item " + i);
         }
-        MyAdapter adapter = new MyAdapter(this, items);
+        ViewAdapter adapter = new ViewAdapter(this, items);
         listView.setAdapter(adapter);
         listView.setOnItemLongClickListener(new OnItemLongClickListener() {
 
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(PullableListViewActivity.this, "LongClick on " + parent.getAdapter().getItemId(position),
+                Toast.makeText(RefreshListViewActivity.this, "LongClick on " + parent.getAdapter().getItemId(position),
                         Toast.LENGTH_SHORT).show();
                 return true;
             }
@@ -64,7 +66,7 @@ public class PullableListViewActivity extends Activity {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(PullableListViewActivity.this, " Click on " + parent.getAdapter().getItemId(position),
+                Toast.makeText(RefreshListViewActivity.this, " Click on " + parent.getAdapter().getItemId(position),
                         Toast.LENGTH_SHORT).show();
             }
         });

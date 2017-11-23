@@ -1,4 +1,4 @@
-package com.tr.droplist.activity;
+package com.tr.droplist.impl;
 
 import android.os.Handler;
 import android.os.Message;

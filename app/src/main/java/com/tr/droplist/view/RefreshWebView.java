@@ -1,20 +1,22 @@
-package com.tr.droplist.pullableview;
+package com.tr.droplist.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.webkit.WebView;
 
-public class PullableWebView extends WebView implements Pullable {
+import com.tr.droplist.impl.Refresh;
 
-    public PullableWebView(Context context) {
+public class RefreshWebView extends WebView implements Refresh {
+
+    public RefreshWebView(Context context) {
         super(context);
     }
 
-    public PullableWebView(Context context, AttributeSet attrs) {
+    public RefreshWebView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public PullableWebView(Context context, AttributeSet attrs, int defStyle) {
+    public RefreshWebView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 

@@ -6,7 +6,7 @@
     <include layout="@layout/refresh_head" />
     <!-- 支持所有实现Pullable接口的View -->
 
-    <com.tr.droplist.pullableview.PullableScrollView
+    <com.tr.droplist.view.RefreshScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
@@ -49,7 +49,7 @@
                     android:background="@drawable/m" />
             </LinearLayout>
         </RelativeLayout>
-    </com.tr.droplist.pullableview.PullableScrollView>
+    </com.tr.droplist.view.RefreshScrollView>
 
     <include layout="@layout/load_more" />
 

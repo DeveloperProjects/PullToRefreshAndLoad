@@ -1,4 +1,4 @@
-package com.tr.droplist.activity;
+package com.tr.droplist.adapter;
 
 import java.util.List;
 
@@ -11,11 +11,11 @@ import android.widget.TextView;
 
 import com.tr.droplist.R;
 
-public class MyAdapter extends BaseAdapter {
+public class ViewAdapter extends BaseAdapter {
     List<String> items;
     Context context;
 
-    public MyAdapter(Context context, List<String> items) {
+    public ViewAdapter(Context context, List<String> items) {
         this.context = context;
         this.items = items;
     }
