@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.webkit.WebView;
 
 import com.tr.droplist.R;
+import com.tr.droplist.utils.PullToRefreshLayout;
 
 public class PullableWebViewActivity extends Activity {
 

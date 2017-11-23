@@ -61,7 +61,7 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <com.tr.droplist.activity.utils.PullToRefreshLayout
+    <com.tr.droplist.utils.PullToRefreshLayout
         android:id="@+id/refresh_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -71,7 +71,7 @@
         <include layout="@layout/refresh_head" />
         <!-- 支持所有实现Pullable接口的View -->
 
-        <com.tr.droplist.activity.pullableview.PullableListView
+        <com.tr.droplist.pullableview.PullableListView
             android:id="@+id/content_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -80,6 +80,6 @@
             android:dividerHeight="1dp" />
 
         <include layout="@layout/load_more" />
-    </com.tr.droplist.activity.utils.PullToRefreshLayout>
+    </com.tr.droplist.utils.PullToRefreshLayout>
 
 </RelativeLayout>

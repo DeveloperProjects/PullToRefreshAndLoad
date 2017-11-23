@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.tr.droplist.R;
+import com.tr.droplist.utils.PullToRefreshLayout;
 
 public class MainActivity extends Activity {
     private ListView listView;
@@ -22,7 +23,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ((PullToRefreshLayout) findViewById(R.id.refresh_view)).setOnRefreshListener(new MyListener());
+        ((PullToRefreshLayout) findViewById(R.id.refresh_view)).setOnRefreshListener((PullToRefreshLayout.OnRefreshListener) new MyListener());
         listView = (ListView) findViewById(R.id.content_view);
         initListView();
     }

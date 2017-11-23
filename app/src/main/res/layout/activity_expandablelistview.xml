@@ -1,4 +1,4 @@
-<com.tr.droplist.activity.utils.PullToRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.tr.droplist.utils.PullToRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/refresh_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
@@ -6,7 +6,7 @@
     <include layout="@layout/refresh_head" />
     <!-- 支持所有实现Pullable接口的View -->
 
-    <com.tr.droplist.activity.pullableview.PullableExpandableListView
+    <com.tr.droplist.pullableview.PullableExpandableListView
         android:id="@+id/content_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,4 +16,4 @@
 
     <include layout="@layout/load_more" />
 
-</com.tr.droplist.activity.utils.PullToRefreshLayout>
+</com.tr.droplist.utils.PullToRefreshLayout>

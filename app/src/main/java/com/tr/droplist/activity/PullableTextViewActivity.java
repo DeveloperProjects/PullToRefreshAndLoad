@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 
 import com.tr.droplist.R;
+import com.tr.droplist.utils.PullToRefreshLayout;
 
 public class PullableTextViewActivity extends Activity {
 
