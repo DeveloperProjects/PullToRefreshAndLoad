@@ -29,8 +29,6 @@
         </activity>
         <activity android:name="com.tr.droplist.activity.RefreshScrollViewActivity" >
         </activity>
-        <activity android:name="com.tr.droplist.activity.RefreshWebViewActivity" >
-        </activity>
         <activity android:name="com.tr.droplist.activity.RefreshImageViewActivity" >
         </activity>
         <activity android:name="com.tr.droplist.activity.RefreshTextViewActivity" >

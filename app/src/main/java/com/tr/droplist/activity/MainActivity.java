@@ -21,6 +21,8 @@ import com.tr.droplist.utils.PullToRefreshLayout;
 public class MainActivity extends Activity {
     private ListView listView;
 
+    private String[] itemName = {"Refresh ListView", "Refresh GridView", "Refresh ExpandableListView", "Refresh SrcollView", "Refresh ImageView", "Refresh TextView"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,13 +37,10 @@ public class MainActivity extends Activity {
      */
     private void initListView() {
         List<String> items = new ArrayList<String>();
-        items.add("Refresh ListView");
-        items.add("Refresh GridView");
-        items.add("Refresh ExpandableListView");
-        items.add("Refresh SrcollView");
-        items.add("Refresh WebView");
-        items.add("Refresh ImageView");
-        items.add("Refresh TextView");
+        int size = itemName.length;
+        for (int i = 0; i < size; i++) {
+            items.add(itemName[i]);
+        }
 
         ViewAdapter adapter = new ViewAdapter(this, items);
         listView.setAdapter(adapter);
@@ -76,12 +75,9 @@ public class MainActivity extends Activity {
                         it.setClass(MainActivity.this, RefreshScrollViewActivity.class);
                         break;
                     case 4:
-                        it.setClass(MainActivity.this, RefreshWebViewActivity.class);
-                        break;
-                    case 5:
                         it.setClass(MainActivity.this, RefreshImageViewActivity.class);
                         break;
-                    case 6:
+                    case 5:
                         it.setClass(MainActivity.this, RefreshTextViewActivity.class);
                         break;
 
